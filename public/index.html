@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modern Live Chat</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="chat-container">
+    <header class="chat-header">
+      <h1><i class="fas fa-comments"></i> Live Chat</h1>
+    </header>
+
+    <main class="chat-main">
+      <div class="chat-sidebar">
+        <h3><i class="fas fa-users"></i> Online Users</h3>
+        <ul id="users"></ul>
+      </div>
+      
+      <div class="chat-messages" id="messages"></div>
+    </main>
+
+    <div class="chat-form-container">
+      <div id="typing-notification"></div>
+      <form id="chat-form">
+        <input 
+          type="text" 
+          id="user" 
+          placeholder="Enter your name..." 
+          required
+        />
+        <input 
+          type="text" 
+          id="message" 
+          placeholder="Type your message here..." 
+          required 
+          autocomplete="off"
+        />
+        <button class="btn"><i class="fas fa-paper-plane"></i> Send</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
