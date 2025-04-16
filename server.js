@@ -6,7 +6,7 @@ const http = require('http');
 const path = require('path');
 
 // MongoDB connection
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/chatdb', {
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://mongo:XcwnkUsJQNgnSDoOSvTZMPiUybslouYx@hopper.proxy.rlwy.net:25743', {
   useNewUrlParser: true,
   useUnifiedTopology: true
 })
